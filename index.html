@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Smart city success or failures in Southeast Asia</title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+	<link rel="stylesheet" href="plugin/chalkboard/style.css">
+
+	<link rel="stylesheet" href="plugin/reveal-pointer/pointer.css" />
+
+    <link rel="stylesheet" href="reveal.css" />
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+	.with-border{
+		border: 0px solid red;
+		font-size: 0.8em
+	}
+
+	.slide-content {
+	border-left: 10px solid blue;
+	}
+</style>
+
+
+
+September 29, 2023 <!-- .element: class="with-border" -->
+
+
+<img src="https://lh6.googleusercontent.com/_FGy9m-MeCNt2uDsBMIFqXpqWh8FYzJkfC2bnMbebcY3YQPP6nyOvSqBvDFHgXD7GLxOzkQIGnGSYjZ_rAlat9T7Qclree1UEzNJgcECdZ9q4tZ-sGd9ZkV8rCNKfOaziYCqOQyGdYiYaxDIb-JOOm8" alt="|450" style="width: 450px; object-fit: fill">
+
+
+
+<div class="block">
+
+Thammasat University<!-- .element: style="font-size: 3em" -->
+
+School of Interdisciplinary Studies<!-- .element: style="font-size: 1.8em" -->
+
+</div>
+
+
+Guest Lecture
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="has-light-background" data-background-color="white" -->
+ <div class="" style="padding: 1px; box-sizing: border-box; position: absolute; left: 0%; top: 1%; height: 19%; width: 15%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+ 
+<img src="https://lh6.googleusercontent.com/_FGy9m-MeCNt2uDsBMIFqXpqWh8FYzJkfC2bnMbebcY3YQPP6nyOvSqBvDFHgXD7GLxOzkQIGnGSYjZ_rAlat9T7Qclree1UEzNJgcECdZ9q4tZ-sGd9ZkV8rCNKfOaziYCqOQyGdYiYaxDIb-JOOm8" alt="|200" style="width: 200px; object-fit: fill">
+
+</div>
+
+<div class="" style="padding: 5px; box-sizing: border-box; position: absolute; left: 20%; top: 20%; height: 30%; width: 65%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+ 
+Smart Cities in ASEAN<!-- .element: style="font-size: 3em" -->
+
+How can Smart City projects succeed?<!-- .element: style="font-size: 1.2em" -->
+</div>
+
+<div class="" style="padding: 1px; box-sizing: border-box; position: absolute; left: 5%; top: 60%; height: 30%; width: 35%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<div style="left-align;">
+
+<h4>Michael Hansen</h4>
+
+
+PhD student at Thammasat University<!-- .element: style="font-size: 0.8em" -->
+
+Consultant with [Ref.Team](Ref.Team)<!-- .element: style="font-size: 0.8em" --> 
+</div>
+</div>
+<div class="" style="padding: 0px; box-sizing: border-box; position: absolute; left: 45%; top: 60%; height: 30%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<div style="left-align;">
+
+Email:<!-- .element: style="text-align: left; font-size: 0.8em" --> michael_tu@motethansen.com<!-- element style=" font-size: 0.8em;" -->
+
+Linkedin:<!-- .element: style="font-size: 0.8em" --> https://www.linkedin.com/in/michaelmotethansen/<!-- element style=" font-size: 0.8em;" -->
+</div>
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<style>
+	.horizontal_dotted_liner{
+	  border-top: 10px solid red;
+	} 
+
+	.horizontal_dotted_liney{
+	  border-top: 10px solid yellow;
+	}  
+</style>
+
+<div class="" style="padding: 1px; box-sizing: border-box; position: absolute; left: 3%; top: 0%; height: 2%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+ 
+<img src="https://lh6.googleusercontent.com/_FGy9m-MeCNt2uDsBMIFqXpqWh8FYzJkfC2bnMbebcY3YQPP6nyOvSqBvDFHgXD7GLxOzkQIGnGSYjZ_rAlat9T7Qclree1UEzNJgcECdZ9q4tZ-sGd9ZkV8rCNKfOaziYCqOQyGdYiYaxDIb-JOOm8" alt="|3200" style="width: 3200px; object-fit: fill">
+
+</div>
+
+<div class="horizontal_dotted_liney" style="position: absolute; left: 3%; top: 0%; height: 10%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+<div class="horizontal_dotted_liner" style="position: absolute; left: 3%; top: 1%; height: 10%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+
+Lecture outcome <!-- .element: style="font-size: 3.3em" -->
+
+<div class="block">
+
+- A Better Understanding of Smart Cities
+- How Social Science relates to Smart Cities
+- Understand what contributes to smart city project's success
+</div>
+
+ <!-- .element: style="font-size: 2em" -->
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="horizontal_dotted_liney" style="position: absolute; left: 3%; top: 0%; height: 10%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+<div class="horizontal_dotted_liner" style="position: absolute; left: 3%; top: 1%; height: 10%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 5%; height: 30%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Are you good at solving puzzles?  <!-- .element: style="font-size: 2em" -->
+</div>
+<div class="" style="position: absolute; left: 5%; top: 45%; height: 30%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Find Waldo !<!-- .element: style="font-size: 1.3em" -->
+</div>
+<div class="" style="position: absolute; left: 20%; top: 30%; height: 60%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src=" images/waldo.jpeg" alt="" style="width: 400px; object-fit: fill">
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="position: absolute; left: 5%; top: 1%; height: 10%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+2 min ..... go .....
+</div>
+<div class="" style="position: absolute; left: 45%; top: 5%; height: 10%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Find Waldo !<!-- .element: style="font-size: 1.3em" -->
+</div>
+<img src="images/waldo_snow.jpg" alt="" style="width: 1200px; object-fit: fill">
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: data-transition="convex" -->
+<style>
+	.horizontal_dotted_liner{
+	  border-top: 10px solid red;
+	} 
+
+	.horizontal_dotted_liney{
+	  border-top: 10px solid yellow;
+	}  
+</style>
+<!-- .slide: data-auto-animate="true" -->
+<div class="horizontal_dotted_liney" style="position: absolute; left: 3%; top: 0%; height: 10%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+<div class="horizontal_dotted_liner" style="position: absolute; left: 3%; top: 1%; height: 10%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+Let's get started ... <!-- .element: style="font-size: 1.4em" -->
+
+Today's agenda  <!-- .element: style="font-size: 3em; font-weight: bold" -->
+-  What is a Smart City?   <!-- .element: style="font-size: 1.5em" -->
+-  The definition of a Smart City?<!-- .element: style="font-size: 1.5em" -->
+-  Examples of Smart Cities | Success and Failures<!-- .element: style="font-size: 1.5em" -->
+- How do we build successful Smart Cities? | ASEAN Framework<!-- .element: style="font-size: 1.5em" -->
+- Activity | What are the important strategies related to Social science?<!-- .element: style="font-size: 1.5em" -->
+	-  Brainstorm and share in class<!-- .element: style="font-size: 1em" -->
+		- Observations from your cities<!-- .element: style="font-size: 1em" -->
+-  Q&A and Discussion<!-- .element: style="font-size: 1.5em" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+What is a Smart City? <!-- .element: style="font-size: 2em; font-weight: bold" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 10%; height: 8%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+I asked an AI engine to show me what a Smart City looks like<!-- .element: style="font-size: 1em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 16%; height: 8%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+DALL-E AI-generated images | What do you see?<!-- .element: style="font-size: 0.8em" -->
+</div>
+<div class="" style="position: absolute; left: 5%; top: 26%; height: 70%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src=" images/DALL·E 2023-09-09 13.44.04 - Smart city cartoon.png" alt="" style="width: 950px; object-fit: fill">
+
+</div>
+<div class="" style="position: absolute; left: 50%; top: 26%; height: 70%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src=" images/DALL·E 2023-09-09 13.46.29 - Smart city cartoon people transport health green spaces parks nature buildings smart education.png" alt="" style="width: 950px; object-fit: fill">
+
+</div>
+<div class="" style="position: absolute; left: 35%; top: 20%; height: 5%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+source:<!-- .element: style="font-size: 0.4em" --> https://openai.com/dall-e-2 <!-- element style="font-size: 0.4em; " -->
+</div>
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="has-light-background" data-background-color="coral" -->
+<div class="" style="position: absolute; left: 5%; top: 5%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Discussion <!-- .element: style="font-size: 4.5em; font-weight: bold" -->
+</div>
+
+<div class="has-light-background" style="background-color: lightgrey; position: absolute; left: 5%; top: 40%; height: 40%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<img src=" images/question_toons.png" alt="" style="object-fit: scale-down">
+
+
+</div>
+
+<div class="has-dark-background" style="background-color: darkslateblue; position: absolute; left: 50%; top: 40%; height: 40%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+What is your understanding of a Smart City? <!-- .element: style="font-size: 1.8em" -->
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: data-transition="slide-in fade-out" -->
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 3%; top: 1%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+What is a Smart City?<!-- .element: style="font-size: 2.8em; font-weight: bold" -->
+</div>
+
+<div class="" style="position: absolute; left: 2%; top: 28%; height: 60%; width: 55%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<img src=" images/smartcity-diagram.png" alt="" style="width: 1000px; object-fit: fill">
+
+
+</div>
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 60%; top: 30%; height: 55%; width: 33%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+- Healthcare <!-- .element: style="font-size: 1.6em" -->
+- Education<!-- .element: style="font-size: 1.6em" -->
+- Transport<!-- .element: style="font-size: 1.6em" -->
+- People<!-- .element: style="font-size: 1.6em" -->
+- Economy<!-- .element: style="font-size: 1.6em" -->
+- Governance<!-- .element: style="font-size: 1.6em" -->
+</div>
+
+<div class="" style="position: absolute; left: 10%; top: 86%; height: 10%; width: 85%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+source:  (Kumar and Dahiya, 2017) <!-- .element: style="font-size: 0.8em" --> [http://link.springer.com/10.1007/978-981-10-1610-3](http://link.springer.com/10.1007/978-981-10-1610-3)
+</div>
+</div>
+
+<aside class="notes"><p>When you search the internet for Smart City, you get something like this:</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 13%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+What is a Smart City?<!-- .element: style="font-size: 2.8em; font-weight: bold" -->
+</div>
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 14%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+Definition of a Smart City. | McKinsey<!-- .element: style="font-size: 1em" -->
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 28%; height: 50%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<div class="block">
+
+A smart city uses data and digital technology to make better decisions and improve the quality of life. 
+For example, with a smart city, it is possible to use technology to improve traffic safety, optimised emergency responses, dynamic mobility options, air quality monitoring, and energy-use optimisation, amongst other benefits (McKinsey).
+
+</div>
+
+ <!-- .element: style="font-size: 1.6em; text-align: left" -->  
+
+</div>
+<div class="" style="position: absolute; left: 5%; top: 80%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+McKinsey: <!-- .element: style="text-align: left; font-size: 0.8em" --> https://www.mckinsey.com/business-functions/operations/our-insights/smart-cities-digital-solutions-for-a-more-livable-future <!-- element style="text-align: left;font-size: 0.8em;" -->
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 13%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+What is a Smart City?<!-- .element: style="font-size: 2.8em; font-weight: bold" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 14%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Definition of a Smart City. | United Nations<!-- .element: style="font-size: 1em" -->
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 23%; height: 50%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<div class="block">
+
+Cities are smart, sustainable cities that improve quality of life and ensure the needs of present and future generations are met for economic, social, environmental, and cultural aspects (United Nations).
+
+</div>
+
+ <!-- .element: style="font-size: 1.6em; text-align: left" --> 
+
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 80%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+United Nations: United Nations Economic Commission for Europe <!-- .element: style="text-align: left; font-size: 0.8em" -->https://unece.org/housing/sustainable-smart-cities<!-- element style="text-align: left;font-size: 0.8em;" -->
+</div>
+</div>
+
+<aside class="notes"><p>So, you can see that it is not easy to set a specific definition of a smart city.
+Some talk about technology and other sustainable living and quality of life.
+What do you think?</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src=" images/E_SDG_poster_UN_emblem_WEB 2020.png" alt="" style="object-fit: scale-down">
+</div>
+
+<aside class="notes"><p>All the SDGs are important to tackle for any city.
+In Bangkok There are over 250000 citizens living below the poverty live.
+Meaning they live in SLUM.
+The problem with poverty and hunger is a common issue, also in countries like the USA.
+ How would you rank the importance of the SDGs in your city? (Country)
+ Are there goals that you believe the country/govenment and people have managed to overcome?</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="position: absolute; left: 5%; top: 5%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Sustainable Development Goals<!-- .element: style="font-size: 2.5em; font-weight: bold" -->
+</div>
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 45%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src=" images/E_WEB_11.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="" style="position: absolute; left: 50%; top: 30%; height: 45%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src=" images/SDG_11_MakeEveryDayCount.gif" alt="" style="object-fit: scale-down">
+
+</div>
+
+
+<div class="" style="position: absolute; left: 5%; top: 75%; height: 15%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Make cities and human settlements inclusive, safe, resilient, and sustainable. <!-- .element: style="font-size: 1.3em" -->
+</div><!-- .element: class="fragment" -->
+</div>
+
+<aside class="notes"><p>SDG 11 is about sustainable cities and communities</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Sustainable Development Goals <!-- .element: style="font-size: 2.3em" -->
+
+<iframe ```xml
+width="100%" height="80%"
+src="https://www.globalgoals.org/goals/"></iframe>
+
+
+Source: https://www.globalgoals.org/goals/
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Definition of a Smart City<!-- .element: style="font-size: 2.8em; font-weight: bold" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 10%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Why Smart Cities Are Important<!-- .element: style="font-size: 1em" -->
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 35%; height: 40%; width: 80%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+54% of the world’s population lives in cities, and this is expected to rise to 66% by 2050, adding a further 2.5 billion people to the urban population over the next three decades. With this expected population growth, there will be a need to manage the environmental and social resources and build economic sustainability. <!-- .element: style="font-size: 1.3em" -->
+
+Smart cities allow citizens and local government authorities to collaborate to launch initiatives and use smart technologies to manage assets and resources in the growing urban environment.<!-- .element: style="font-size: 1.3em" -->
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+Definition of a Smart City<!-- .element: style="font-size: 2.8em" -->
+</div>
+
+
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 25%; height: 10%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+ Smart City Components:<!-- .element: style="font-size: 1.4em" -->
+
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 35%; height: 45%; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+- Healthcare<!-- .element: style="font-size: 1.3em" -->
+- Education <!-- .element: style="font-size: 1.3em" -->
+- Transport <!-- .element: style="font-size: 1.3em" -->
+- People <!-- .element: style="font-size: 1.3em" -->
+- Economy <!-- .element: style="font-size: 1.3em" -->
+- Governance<!-- .element: style="font-size: 1.3em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 55%; top: 25%; height: 10%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Sustainable Smart City:<!-- .element: style="font-size: 1.4em" -->
+
+</div><!-- .element: class="fragment" -->
+
+<div class="" style="position: absolute; left: 51%; top: 44%; height: 45%; width: 44%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+- Citizen engagement<!-- .element: style="font-size: 1.3em" -->
+- Infrastructure<!-- .element: style="font-size: 1.3em" -->
+- Communications<!-- .element: style="font-size: 1.3em" -->
+- Public Safety<!-- .element: style="font-size: 1.3em" -->
+- Resilience<!-- .element: style="font-size: 1.3em" -->
+- Energy efficiency<!-- .element: style="font-size: 1.3em" -->
+- Healthier communities<!-- .element: style="font-size: 1.3em" -->
+- Transportation <!-- .element: style="font-size: 1.3em" -->
+- Data Analytics<!-- .element: style="font-size: 1.3em" -->
+
+</div><!-- .element: class="fragment" -->
+</div>
+
+<aside class="notes"><p>format using <a href="https://mszturc.github.io/obsidian-advanced-slides/extend-syntax/speakernotes/">https://mszturc.github.io/obsidian-advanced-slides/extend-syntax/speakernotes/</a>
+These Smart City components are going through ongoing evolvement</p>
+</aside></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Example of Smart Cities <!-- .element: style="font-size: 2.8em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 10%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Singapore Smart Nation <!-- .element: style="font-size: 1em" -->
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 28%; height: 45%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src=" images/Singapore_green.png" alt="" style="width: 1000px; object-fit: fill">
+
+</div>
+<div class="" style="position: absolute; left: 45%; top: 28%; height: 45%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Smart Nation pillars:<!-- .element: style="font-size: 1.3em" -->
+<div class="block">
+
+- Digital society
+- Digital Economy
+- Digital Government
+</div>
+
+<!-- .element: style="font-size: 1.2em" -->
+
+The Green Plan:<!-- .element: style="font-size: 1.3em" -->
+<div class="block">
+
+- Park development
+- Urban gardens
+- Green rooftops
+- Green highrise
+</div>
+
+ <!-- .element: style="font-size: 1.2em" -->
+
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 80%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<div class="block">
+
+Source: <!-- .element: style="font-size: 0.6em; text-align: left" -->URAhttps://www.ura.gov.sg/-/media/Corporate/Resources/Publications/Books/UD_Guidebook_Green_and_Liveable_City.pdf 
+ </div>
+
+  
+ 
+ </div>
+ <div class="" style="position: absolute; left: 5%; top: 81%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+and Smart Nation (PMO):<!-- .element: style="font-size: 0.6em; text-align: left" --> https://www.smartnation.gov.sg/about-smart-nation/pillars-of-smart-nation/<!-- element style="font-size: 0.6em;" -->
+</div>
+</div>
+
+<aside class="notes"><p>Singapore focuses on three main areas...
+These expand to sustainable focus areas with the latest</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 12%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Digital Society<!-- .element: style="font-size: 2.8em" -->
+</div>
+<div class="" style="position: absolute; left: 5%; top: 22%; height: 50%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src=" images/Pasted image 20230915101618.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="" style="position: absolute; left: 55%; top: 22%; height: 65%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+- Making technology more accessible to citizens.<!-- .element: style="font-size: 1.3em" -->
+- Improving all citizens’ digital literacy<!-- .element: style="font-size: 1.3em" -->
+- Helping the local community and businesses drive the adoption of technology<!-- .element: style="font-size: 1.3em" -->
+- Designing inclusive digital services<!-- .element: style="font-size: 1.3em" -->
+</div>
+</div>
+
+<aside class="notes"><p>What are some of the biggest challenges when rolling this out?<!-- .element: style="text-align: left" -->
+basic education, scam, financial deficiency</p>
+<ul>
+<li>By making technology more accessible to every Singaporean.</li>
+<li>By improving Singaporeans’ digital literacy</li>
+<li>By helping the local community and businesses drive widespread adoption of technology</li>
+<li>By designing inclusive digital services</li>
+</ul>
+<p>What are some of the biggest challenges when rolling this out?</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 12%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Digital Economy<!-- .element: style="font-size: 2.8em" -->
+</div>
+<div class="" style="position: absolute; left: 5%; top: 15%; height: 70%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src=" images/Pasted image 20230915110218.png" alt="" style="width: 1000px; object-fit: fill">
+
+</div>
+<div class="" style="position: absolute; left: 56%; top: 15%; height: 70%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+- Accelerate economic growth by digitalising industries and businesses<!-- .element: style="font-size: 1.3em" -->
+- Develop an ecosystem to help businesses stay vibrant and competitive<!-- .element: style="font-size: 1.3em" -->
+</div>
+</div>
+
+<aside class="notes"><p>Introducing a digital transformation for businesses and upskilling of staff to cope with the growing competition (globally)</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-background-opacity="0.1" data-background-image=" images/SGD framework Action.png" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: data-auto-animate="true" -->
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 12%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Digital Economy<!-- .element: style="font-size: 2.8em" -->
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 35%; height: 35%; width: 42%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Singapore’s framework for action focuses on three pillars of growth. <!-- .element: style="text-align: left; font-size: 1.2em" -->
+1. Accelerate: the digitalisation of industries. <!-- .element: style="font-size: 1.1em" -->
+2. Compete: enhance the economic competitiveness. <!-- .element: style="font-size: 1.1em" -->
+3. Transform: Develop the next-generation digital industry.<!-- .element: style="font-size: 1.1em" -->
+</div>
+
+<div class="" style="position: absolute; left: 43%; top: 20%; height: 60%; width: 52%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Four cross-cutting enablers will support these pillars of growth. <!-- .element: style="text-align: left; font-size: 1.2em" -->
+- Talent: up-skill, re-skill, and raise the digital capabilities of the workforce. <!-- .element: style="font-size: 1.1em" -->
+- Research and Innovation: Innovate and leverage intellectual property for competitive advantage, harness research capabilities, and innovation. <!-- .element: style="font-size: 1.1em" -->
+- Policy, Regulations, and Standards: Competitive policy and regulatory environment, including data innovation. <!-- .element: style="font-size: 1.1em" -->
+- Physical and Digital Infrastructure: Connectivity, platforms, data, and other infrastructure to support the digital economy.<!-- .element: style="font-size: 1.1em" -->
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 94%; height: 5%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+Source:<!-- .element: style="font-size: 0.8em" -->
+https://www.smartnation.gov.sg/files/abt-smart-nation/sgd%20framework%20for%20action.pdf 
+</div>
+</div>
+
+<aside class="notes"><p>Singapore’s framework for action focuses on three pillars of growth. </p>
+<ol>
+<li>Accelerate: To accelerate the digitalisation of our existing industries for productivity improvements, efficiency gains and new revenue opportunities. </li>
+<li>Compete: To enhance our economic competitiveness by fostering new integrated ecosystems converged around customers’ needs. </li>
+<li>Transform: To develop the next generation digital industry as an engine of growth for the economy, and a driver of digitalisation across all industries.</li>
+</ol>
+<p>Four cross-cutting enablers will support these pillars of growth. </p>
+<ul>
+<li>Talent: To continually up-skill, re-skill and raise the digital capabilities of the workforce. </li>
+<li>Research and Innovation: For firms to innovate and leverage intellectual property for competitive advantage, harnessing the capabilities in our research and innovation community. </li>
+<li>Policy, Regulations and Standards: To ensure that our policy and regulatory environment, including the environment for data innovation, is globally competitive in a digital world. </li>
+<li>Physical and Digital Infrastructure: To ensure that connectivity, platforms, data, and other infrastructure well-support the growth of the digital economy.</li>
+</ul>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 12%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Digital Government<!-- .element: style="font-size: 2.8em" -->
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 15%; height: 78%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src=" images/Pasted image 20230915110450.png" alt="" style="object-fit: scale-down">
+
+</div>
+</div>
+
+<aside class="notes"><p>What are the elements of a digital government?</p>
+<ul>
+<li>Services that are easy to use, reliable, and relevant</li>
+<li>Seamless digital transactions</li>
+<li>Systems and data that are secure</li>
+<li>A digitally confident public service workplace
+How do we become a Digital Government?</li>
+<li>Strengthening integration between policy, operation, and technology</li>
+<li>Re-engineering the Government ICT infrastructure</li>
+<li>Operating reliable, resilient, and secure systems.</li>
+<li>Raising our digital capabilities to pursue innovation</li>
+<li>Integrating services around citizens&#39; and business needs</li>
+<li>Co-creating with citizens and businesses and facilitating the adoption of technology</li>
+</ul>
+</aside></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Example of Smart Cities <!-- .element: style="font-size: 2.8em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 10%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Bangkok, Thailand  <!-- .element: style="font-size: 1em" -->
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 20%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+DEPA and EEC mostly drive Smart City developments.<!-- .element: style="font-size: 1.3em" -->
+</div>
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 50%; top: 40%; height: 40%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<img src=" images/depa Logo web-01.png" alt="" style="object-fit: scale-down">
+
+
+</div>
+
+<div class="has-dark-background" style="background-color: navy; position: absolute; left: 5%; top: 40%; height: 40%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<img src=" images/Pasted image 20230915230702.png" alt="" style="width: 800px; object-fit: fill">
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 15%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+DEPA |
+Digital Economic Promotion Agency<!-- .element: style="font-size: 2em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 12%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+7 Dimensions of Smart City <!-- .element: style="font-size: 1em" -->
+</div>
+
+<div class="" style="padding: 0px; box-sizing: border-box; position: absolute; left: 5%; top: 20%; height: 70%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+
+<img src=" images/Pasted image 20230915232347.png" alt="" style="width: 1500px; object-fit: fill">
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 15%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+DEPA |
+Digital Economic Promotion Agency<!-- .element: style="font-size: 2em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 12%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+7 Dimensions of Smart City    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 👇 <!-- .element: style="font-size: 0.8em" -->
+</div>
+
+<div class="" style="position: absolute; left: 45%; top: 30%; height: 55%; width: 42%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+- Smart Energy<!-- .element: style="font-size: 1.3em" -->
+- Smart Economy<!-- .element: style="font-size: 1.3em" -->
+- Smart Living<!-- .element: style="font-size: 1.3em" -->
+- Smart Environment<!-- .element: style="font-size: 1.3em" -->
+- Smart People<!-- .element: style="font-size: 1.3em" -->
+- Smart Governance<!-- .element: style="font-size: 1.3em" -->
+- Smart Mobility<!-- .element: style="font-size: 1.3em" -->
+</div>
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 55%; width: 42%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+Cities submit their smart city proposal.<!-- .element: style="font-size: 1.3em" -->
+- The project MUST include/contribute to the Dimensions<!-- .element: style="font-size: 1.1em" -->
+- Cities submit a long-term plan with multiple projects and expected outcomes.<!-- .element: style="font-size: 1.1em" -->
+- DEPA assists with innovation path and project initiations.<!-- .element: style="font-size: 1.1em" -->
+</div>
+
+<div class="has-light-background slideLeftIn slower" style="background-color: coral; transform: rotate(-20deg); position: absolute; left: 5%; top: 43%; height: 30%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+Can you give examples of projects related to the 7 dimensions in Bangkok or Thailand? <!-- .element: style="font-size: 1.6em" -->
+</div> <!-- .element: class="fragment fade-up" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 15%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+EEC | 
+Eastern Economic Corridor<!-- .element: style="font-size: 2em" -->
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 12%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Vision "To be a regional business and financial center"<!-- .element: style="font-size: 1.1em" -->
+Developing Smart, Liveable Cities on par with international standards by 2027.<!-- .element: style="font-size: 1.1em" -->
+</div>
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 60%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src=" images/Pasted image 20230916144642.png" alt="" style="object-fit: scale-down">
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+EEC | 
+Eastern Economic Corridor<!-- .element: style="font-size: 2em" -->
+</div>
+<div class="" style="position: absolute; left: 5%; top: 10%; height: 90%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src=" images/eec_businesscenter.png" alt="" style="width: 1000px; object-fit: fill">
+
+</div>
+
+<div class="" style="position: absolute; left: 50%; top: 10%; height: 90%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<img src=" images/Pasted image 20230916144119.png" alt="" style="width: 1000px; object-fit: fill">
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+EEC | 
+Eastern Economic Corridor <!-- .element: style="font-size: 2em" -->
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 13%; height: 80%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<img src=" images/eec-south_thailand.png" alt="" style="width: 1000px; object-fit: fill">
+
+</div>
+
+<div class="" style="position: absolute; left: 50%; top: 13%; height: 80%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<img src=" images/Pasted image 20230916143847.png" alt="" style="width: 900px; object-fit: fill">
+
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 15%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+EEC | 
+Eastern Economic Corridor <!-- .element: style="font-size: 2em" -->
+</div>
+
+<div class="has-dark-background" style="background-color: rgb(32,32,32); position: absolute; left: 5%; top: 20%; height: 60%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+  
+Comprehensive Infrastructure<!-- .element: style="font-size: 1.1em" -->
+- High-speed rail connecting 3 airports<!-- .element: style="font-size: 1.1em" -->
+- Utapao Airport And the eastern aviation city<!-- .element: style="font-size: 1.1em" -->
+- Laem Chabang Port Phase 3<!-- .element: style="font-size: 1.1em" -->
+- Map Ta Phut Industrial Port Phase 3<!-- .element: style="font-size: 1.1em" -->
+ </div>
+
+<div class="has-dark-background" style="background-color: rgb(32,32,32); position: absolute; left: 50%; top: 20%; height: 60%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<img src=" images/EECrail_dev_plan.png" alt="" style="object-fit: scale-down">
+
+
+</div>
+</div></script></section></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: data-auto-animate="true" -->
+<!-- .slide: data-background-opacity="0.45" data-background-image=" images/DALL·E 2023-09-09 13.47.38 - Smart city people transport health green spaces parks nature buildings smart education urban space farm.png" -->
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Example of Smart Cities <!-- .element: style="font-size: 2.8em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 10%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Success and Failures 
+</div>
+<div class="has-light-background" style="background-color: lightblue; opacity: 0.73; position: absolute; left: 5%; top: 45%; height: 35%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+We got to understand some of the initiatives from Singapore and Thailand.<!-- .element: style="font-size: 1.8em; font-weight: bold" -->
+
+Let us take a look at some Smart City project examples<!-- .element: style="font-size: 1.6em; font-weight: bold" -->
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Example of Smart Cities Fails<!-- .element: style="font-size: 2.8em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 11%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Abu Dhabi Masdar 
+</div>
+
+<div class="" style="position: absolute; left: 3%; top: 25%; height: 50%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src=" images/Pasted image 20230917181148.png" alt="" style="width: 900px; object-fit: fill">
+
+</div>
+
+<div class="" style="position: absolute; left: 50%; top: 32%; height: 40%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+A low-carbon city.<!-- .element: style="font-size: 1.6em" -->
+
+Why did it fail?<!-- .element: style="font-size: 1.4em; font-weight: bold" -->
+- Financial deficit due to the crisis in 2008<!-- .element: style="font-size: 1.1em" -->
+- Lack of public transportation<!-- .element: style="font-size: 1.1em" -->
+
+Can it succeed?<!-- .element: style="font-size: 1.4em; font-weight: bold" -->
+- Yes, with the right strategy and investments<!-- .element: style="font-size: 1.1em" -->
+</div>
+<div class="" style="position: absolute; left: 5%; top: 75%; height: 20%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+source:<!-- .element: style="text-align: left; font-size: 0.8em" --> https://www.bayut.com/mybayut/pros-cons-living-masdar-city/#:~:text=Currently%2C%20one%20of%20the%20main,easy%20access%20to%20public%20transport.
+</div>
+</div>
+
+<aside class="notes"><p>As of 2020, Masdar has just 1,300 residents living in its small cluster of low-carbon buildings (far from the originally planned 50,000), and some 4,000 people commuting in for work. The entire city is <a href="https://www.bloomberg.com/news/articles/2020-02-14/the-reality-of-abu-dhabi-s-unfinished-utopia">still in phase one</a> of its development and isn’t expected to be finished until 2030, 15 years after its initial deadline.</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Example of Smart Cities Fails<!-- .element: style="font-size: 2.8em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 11%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Toronto
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 25%; height: 50%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<img src=" images/Pasted image 20230917221210.png" alt="" style="width: 1000px; object-fit: fill">
+
+</div>
+
+<div class="" style="position: absolute; left: 50%; top: 30%; height: 40%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+Opportunity<!-- .element: style="font-size: 1.6em; font-weight: bold" -->
+- Energy-efficient building research and development<!-- .element: style="font-size: 1.2em" -->
+- Data enablement for startups<!-- .element: style="font-size: 1.2em" -->
+- 44000 new job creations<!-- .element: style="font-size: 1.2em" -->
+
+Failure<!-- .element: style="font-size: 1.6em; font-weight: bold" -->
+- Perceived lack of transparency<!-- .element: style="font-size: 1.2em" -->
+- Believe in personal data use by Google<!-- .element: style="font-size: 1.2em" -->
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 76%; height: 15%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+source:<!-- .element: style="text-align: left; font-size: 0.8em" -->  
+[https://archive.curbed.com/2020/5/7/21250678/sidewalk-labs-toronto-smart-city-fail](https://archive.curbed.com/2020/5/7/21250678/sidewalk-labs-toronto-smart-city-fail)
+
+[https://builtin.com/internet-things/smart-cities-promise](https://builtin.com/internet-things/smart-cities-promise)<!-- .element: style="text-align: left; font-size: 0.8em" -->
+</div>
+</div>
+
+<aside class="notes"><p>Google’s sister company Sidewalk Labs promised in 2017 to construct a smart, water-front neighborhood in Toronto.
+The project was set to a Halt due to privacy concerns from the local communities.
+The Project has goals to</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Example of Smart Cities Success<!-- .element: style="font-size: 2.8em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 10%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Bangkok  | Traffy Fondu
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 25%; height: 60%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src="https://lh5.googleusercontent.com/ArbtwqR74f1ldK8bcI1k0NHPPa7mmgb1SE6M3rhCKZ8znPVFw6DxTnKE6_Bmxz8_JFci6NDkehkAnO-P3mKbcb5G-ojWz25LKuhoDDKZ6H1Q4d8XIMyrKmk8Zi6t2d_F2dxRdt1lmA7_H64RgfYig3k" alt="|900" style="width: 900px; object-fit: fill">
+
+</div>
+<div class="" style="position: absolute; left: 45%; top: 25%; height: 60%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src="https://lh4.googleusercontent.com/aAraRSfdNQ2KAsFt-H6Qpbn8G3CsoVTbmld02O14SwtDAbrtyZuaaTAM2GtNt4L-JgnZ6VrWeV-Zv_NC_TJ0U8GSxvKFZhEyBq_WL7Go9SdebrV-wtJ3Rv7XrgZusTo9K3M_I3Fwa7fwwWKPeh3sTSs" alt="" style="object-fit: scale-down">
+
+</div>
+<div class="" style="position: absolute; left: 25%; top: 90%; height: 10%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+[Traffy Fondue: https://share.traffy.in.th/teamchadchart](https://share.traffy.in.th/teamchadchart)
+</div>
+</div>
+
+<aside class="notes"><p>one of the characteristics of a Smart City is transparency. this includes how data is used and collected and also how data can be made available for the citizens through an open data platform</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Example of Smart Cities Success<!-- .element: style="font-size: 2.8em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 10%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Bangkok  | Traffy Fondu
+</div>
+
+<div class="" style="position: absolute; left: 5%; top: 30%; height: 60%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src="https://lh6.googleusercontent.com/3m-PH-w35Phh3d1Dg3WpqBdPUFMbn5bgV2JuU3iBoOeNpZfcwIyLiiSpY2piBhrFXGPRCxETJsSYZ-cRCozmAn2a6AlIuXyuNTXQWIRuzLnWcIsCLL-T9vl8CBcKAMlm9VV113y1ZR1ehHFDHDkoRMs" alt="" style="object-fit: scale-down">
+
+</div>
+<div class="" style="position: absolute; left: 45%; top: 25%; height: 60%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src="https://lh4.googleusercontent.com/Fuyd9_KeaUoVIB3uvTcYOQz-1qZpYld9bwE36x_a9-lrPvDRsDDUxhgn6yk5xE88fJAibxAueyiKv2TBK_j-C9rYbyA2AqilvX2HHdZZKT1j6UO6jJ_QCIlhpPu4aFuAr4dhoPBi0H0064lq0IPz1Ao" alt="" style="object-fit: scale-down">
+
+</div>
+<div class="" style="position: absolute; left: 25%; top: 90%; height: 10%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+[Traffy Fondue: https://share.traffy.in.th/teamchadchart](https://share.traffy.in.th/teamchadchart)
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Example of Smart Cities Success<!-- .element: style="font-size: 2.8em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 10%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Singapore | TraceTogether
+</div>
+
+<div class="has-light-background" style="background-color: lightblue; position: absolute; left: 5%; top: 28%; height: 60%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src="https://lh5.googleusercontent.com/Srzc8USwKllweMKbvb-x1sX92_m0vZEB61mcWsBrSo9GDPoz6IPZfC36ObyUMgWM1JnNoRb1RmRbZex7PG_M_A7vYK2pqVFLFZz1LgknsS0i5ByKX8Wjf1bAaFcbNypVaiQM4IM_F4kekYe2NVANSR0" alt="" style="object-fit: scale-down">
+
+</div>
+<div class="has-light-background" style="background-color: lightblue; position: absolute; left: 40%; top: 28%; height: 60%; width: 55%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<img src="https://lh3.googleusercontent.com/xoIPpkK506FwrkfeG3P_SoKfOuMpzn715uXGbg_Ft9TVVh9HPVTbWMzWamvW5hcpY7tadWyl-Q2CTwSPzAuF6V7nFIEXCBpYV237XlVmd0pElHUjRVjnIeaDlTLCwc1eKr8WhPMVnTiDrq3lAH_Y9TM" alt="" style="object-fit: scale-down">
+
+</div>
+</div>
+
+<aside class="notes"><p>Public and Private Sector</p>
+<ul>
+<li>How does the public sector operate and collaborate?</li>
+<li>What do we see from the private sector?</li>
+</ul>
+<p> describe how governments try to develop public-privat -partnerships and
+how private companies get involved to bid on projects, research, innovate, and operate.
+examples from Singapore MRT or Bangkok BTS and MRT</p>
+</aside></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src=" images/Pasted image 20230926224116.png" alt="" style="width: 1400px; object-fit: fill">
+
+<div class="" style="position: absolute; left: 25%; top: 90%; height: 10%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+[Digital training: https://www.gov.sg/article/digital-training-for-seniors](https://www.gov.sg/article/digital-training-for-seniors)
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="https://lh3.googleusercontent.com/rQBmt-OYHPde5C6J7e8W62nS95EZL3pujQZ20tweaD4Z0-s33ccGjixkr2GIXtrR_z7MCxhm-NpGbSpsGD3zsOPy13YxuxqcD894lF7OvBUc8r2lLIAZ7hFPphg9IuKEKso1CdDKn1-mwW4sWP7rBST3=s2048" alt="|1800" style="width: 1800px; object-fit: fill">
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 0%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+What is a liveable city?<!-- .element: style="font-size: 2.8em" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 9%; height: 7%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Quality-of-life factors measure liveability
+</div>
+
+<div class="has-light-background" style="background-color: lightblue; position: absolute; left: 5%; top: 20%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Access to <!-- .element: style="font-size: 1.8em" -->
+</div><!-- .element: class="fragment fade-up" -->
+
+<div class="" style="position: absolute; left: 5%; top: 35%; height: 40%; width: 35%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+- Fresh water<!-- .element: style="font-size: 1.5em" -->
+- Food<!-- .element: style="font-size: 1.5em" -->
+- Housing<!-- .element: style="font-size: 1.5em" -->
+- Transport<!-- .element: style="font-size: 1.5em" -->
+- Health care<!-- .element: style="font-size: 1.5em" -->
+</div> <!-- .element: class="fragment fade-up" -->
+<div class="" style="position: absolute; left: 45%; top: 38%; height: 40%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+  - Education <!-- .element: style="font-size: 1.5em" -->
+  - Safe and stable built and natural environment <!-- .element: style="font-size: 1.5em" -->
+  - Green spaces <!-- .element: style="font-size: 1.5em" -->
+  - Social stability <!-- .element: style="font-size: 1.5em" -->
+  - Cultural, entertainment and recreation <!-- .element: style="font-size: 1.5em" -->
+</div> <!-- .element: class="fragment fade-up" -->
+
+<div class="" style="position: absolute; left: 5%; top: 72%; height: 25%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+liveability is also based on social and psychological factors, like emotion and perception<!-- .element: style="font-size: 0.9em; font-weight: bold" -->
+</div><!-- .element: class="fragment" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="has-light-background drop" data-background-color="cornflowerblue" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Is it time for a break? <!-- .element: style="font-size: 4em; font-weight: bold" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+Break<!-- .element: style="font-size: 3em; font-weight: bold" -->
+
+
+<iframe ```xml
+width="100%" height="100%"
+src="https://e.ggtimer.com/15"></iframe>
+</div></script></section><section ><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="has-light-background" data-background-color="coral" -->
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+How do we build successful Smart Cities? <!-- .element: style="font-size: 2em; font-weight: bold" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 10%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+ASEAN Smart Cities Framework
+</div><!-- .element: class="fragment" -->
+
+<div class="block">
+
+Discussion 
+</div>
+
+ <!-- .element: style="font-size: 4em; font-weight: bold" -->
+
+<div class="block">
+
+- What are the important steps?
+- Should we focus on technology or people?
+- Can a framework help to achieve success?
+
+</div>
+
+<!-- .element: style="font-size: 2em; font-weight: bold; text-align: left" -->
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 1%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Smart Cities in ASEAN<!-- .element: style="font-size: 2em; font-weight: bold" -->
+</div>
+<div class="has-light-background" style="background-color: gainsboro; position: absolute; left: 5%; top: 10%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+progress on Smart City projects
+</div>
+<div class="" style="position: absolute; left: 5%; top: 12%; height: 90%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<img src=" images/Pasted image 20230916214538.png" alt="" style="width: 950px; object-fit: fill">
+
+</div>
+<div class="" style="position: absolute; left: 5%; top: 93%; height: 6%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+source: <!-- .element: style="font-size: 0.8em" -->https://asean.org/our-communities/asean-smart-cities-network/
+</div>
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src=" images/Pasted image 20230916215226.png" alt="" style="width: 1650px; object-fit: fill">
+
+
+
+source:<!-- .element: style="font-size: 0.8em" --> https://asean.org/wp-content/uploads/2019/02/ASCN-ASEAN-Smart-Cities-Framework.pdf
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src=" images/Pasted image 20230916221250.png" alt="" style="width: 1650px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src=" images/Pasted image 20230916221836.png" alt="" style="width: 1460px; object-fit: fill">
+
+source:<!-- .element: style="font-size: 0.6em" --> https://asean.org/wp-content/uploads/2022/06/ASEAN_SmartCityPlanningGuidebook_en_WEBSITE.pdf
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src=" images/Pasted image 20230916221936.png" alt="" style="width: 1600px; object-fit: fill">
+</div></script></section><section data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src=" images/Pasted image 20230916222028.png" alt="" style="width: 1500px; object-fit: fill">
+</div></script></section></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="has-light-background" data-background-color="coral" -->
+<div class="" style="position: absolute; left: 1%; top: 5%; height: 10%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+Activity  (30 min)<!-- .element: style="font-size: 2.8em; font-weight: bold" -->
+</div>
+
+<div class="has-light-background" style="background-color: lightgrey; position: absolute; left: 55%; top: 20%; height: 40%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+
+<img src=" images/question_toons.png" alt="" style="object-fit: scale-down">
+
+
+</div>
+
+<div class="has-dark-background" style="background-color: darkslateblue; position: absolute; left: 5%; top: 20%; height: 40%; width: 45%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+What are the important Smart City strategies related to Social science? <!-- .element: style="font-size: 1.8em" -->
+</div>
+
+<div class="has-dark-background" style="background-color: darkslateblue; position: absolute; left: 5%; top: 63%; height: 30%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+- Group exercise: Brainstorm and share in class <!-- .element: style="font-size: 1.3em" -->
+- Observations from your cities<!-- .element: style="font-size: 1em" -->
+- Suggest focus areas that cities should work on<!-- .element: style="font-size: 1em" -->
+	- Provide arguments for why this is important<!-- .element: style="font-size: 1em" -->
+
+</div>
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<!-- .slide: class="has-light-background" data-background-color="lightblue" -->
+<div class="" style="padding: 1px; box-sizing: border-box; position: absolute; left: 3%; top: 0%; height: 2%; width: 90%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+ 
+<img src="https://lh6.googleusercontent.com/_FGy9m-MeCNt2uDsBMIFqXpqWh8FYzJkfC2bnMbebcY3YQPP6nyOvSqBvDFHgXD7GLxOzkQIGnGSYjZ_rAlat9T7Qclree1UEzNJgcECdZ9q4tZ-sGd9ZkV8rCNKfOaziYCqOQyGdYiYaxDIb-JOOm8" alt="|3200" style="width: 3200px; object-fit: fill">
+
+</div>
+<!-- .slide: data-auto-animate="true" -->
+<div class="horizontal_dotted_liney" style="position: absolute; left: 3%; top: 0%; height: 10%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+<div class="horizontal_dotted_liner" style="position: absolute; left: 3%; top: 1%; height: 10%; width: 94%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+</div>
+
+Q&A and Discussion<!-- .element: style="font-size: 2.3em; font-weight: bold" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 1px; box-sizing: border-box; position: absolute; left: 0%; top: 1%; height: 19%; width: 15%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+ 
+<img src="https://lh6.googleusercontent.com/_FGy9m-MeCNt2uDsBMIFqXpqWh8FYzJkfC2bnMbebcY3YQPP6nyOvSqBvDFHgXD7GLxOzkQIGnGSYjZ_rAlat9T7Qclree1UEzNJgcECdZ9q4tZ-sGd9ZkV8rCNKfOaziYCqOQyGdYiYaxDIb-JOOm8" alt="|200" style="width: 200px; object-fit: fill">
+
+</div>
+
+Your takeaways<!-- .element: style="font-size: 2.8em; font-weight: bold" -->
+
+<div class="block">
+
+- Concepts of a Smart City
+- How cities in ASEAN aim to build better cities and environments for its citizens.
+- Innovation and Strategies for Smart Cities
+	- Urban innovation and citizens' quality of life
+	- How citizens can get involved in making their city better
+</div>
+
+ <!-- .element: style="font-size: 1.3em; font-weight: bold" -->
+</div></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" data-auto-animate="true" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<img src="https://lh6.googleusercontent.com/_FGy9m-MeCNt2uDsBMIFqXpqWh8FYzJkfC2bnMbebcY3YQPP6nyOvSqBvDFHgXD7GLxOzkQIGnGSYjZ_rAlat9T7Qclree1UEzNJgcECdZ9q4tZ-sGd9ZkV8rCNKfOaziYCqOQyGdYiYaxDIb-JOOm8" alt="|350" style="width: 350px; object-fit: fill">
+
+
+
+<div class="block">
+
+Thank you<!-- .element: style="font-size: 4em; font-weight: bold" -->
+
+Thammasat University<!-- .element: style="font-size: 1.8em" -->
+
+School of Interdisciplinary Studies<!-- .element: style="font-size: 1.2em" -->
+
+</div>
+
+
+
+ <div class="" style="padding: 0px; box-sizing: border-box; position: absolute; left: 1%; top: 66%; height: 30%; width: 15%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+Michael Hansen<!-- .element: style="text-align: left; font-size: 0.9em" -->
+</div>
+<div class="" style="padding: 0px; box-sizing: border-box; position: absolute; left: 1%; top: 76%; height: 20%; width: 47%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<div style="left-align;">
+<div class="block">
+
+Email:  michael_tu@motethansen.com </br>
+Linkedin: https://www.linkedin.com/in/michaelmotethansen/
+</div>
+
+<!-- .element: style="font-size: 0.8em" -->
+</div>
+</div>
+</div></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/chalkboard/plugin.js"></script>
+	<script src="plugin/reveal-pointer/pointer.js"></script>
+	<script src="plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+	      RevealPointer,
+		  RevealChalkboard, 
+		  ElapsedTimeBar
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+				{ icon: '<i class="fa fa-pen-square"></i>',
+				title: 'Toggle chalkboard (B)',
+				action: 'RevealChalkboard.toggleChalkboard();'
+				},
+				{ icon: '<i class="fa fa-pen"></i>',
+				title: 'Toggle notes canvas (C)',
+				action: 'RevealChalkboard.toggleNotesCanvas();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":"1920","height":"1200","margin":"0","maxScale":"0.95","controls":true,"progress":true,"slideNumber":"true","transition":"slide","transitionSpeed":"default"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
